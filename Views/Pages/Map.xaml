@@ -1,0 +1,144 @@
+﻿<Page x:Class="VKI.MapApp.Views.Pages.Map"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:controls ="clr-namespace:VKI.MapApp.Views.Controls"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:local="clr-namespace:VKI.MapApp.Views.Pages"
+      xmlns:Controls="clr-namespace:VKI.MapApp.Views.Controls"
+      mc:Ignorable="d" d:DesignHeight="576"
+      d:DesignWidth="360" Title="Map">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <UniformGrid Columns="4" Margin="2">
+            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+                <Image Source="{Binding BtFloor1}"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding GoToFloor1}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Border>
+
+            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+                <Image Source="{Binding BtFloor2}"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding GoToFloor2}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Border>
+
+            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+                <Image Source="{Binding BtFloor3}"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding GoToFloor3}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Border>
+
+            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+                <Image Source="{Binding BtFloor4}"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding GoToFloor4}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Border>
+        </UniformGrid>
+
+        <Canvas Grid.Row="1">
+
+            <Controls:FloorBlock1 DataContext="{Binding Floor1}" HorizontalAlignment="Left" Height="154" VerticalAlignment="Top" Canvas.Left="-73" Canvas.Top="185" Width="488" RenderTransformOrigin="0.5,0.5">
+                <Controls:FloorBlock1.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Controls:FloorBlock1.RenderTransform>
+                <Controls:FloorBlock1.Style>
+                    <Style TargetType="Controls:FloorBlock1">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Controls:FloorBlock1.Style>
+            </Controls:FloorBlock1>
+
+            <Controls:FloorBlock2 DataContext="{Binding Floor2}" HorizontalAlignment="Left" Height="154" VerticalAlignment="Top" Canvas.Left="-73" Canvas.Top="185" Width="488" RenderTransformOrigin="0.5,0.5">
+                <Controls:FloorBlock2.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Controls:FloorBlock2.RenderTransform>
+                <Controls:FloorBlock2.Style>
+                    <Style TargetType="Controls:FloorBlock2">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Controls:FloorBlock2.Style>
+            </Controls:FloorBlock2>
+
+            <Controls:FloorBlock3 DataContext="{Binding Floor3}" HorizontalAlignment="Left" Height="154" VerticalAlignment="Top" Canvas.Left="-73" Canvas.Top="185" Width="488" RenderTransformOrigin="0.5,0.5">
+                <Controls:FloorBlock3.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Controls:FloorBlock3.RenderTransform>
+                <Controls:FloorBlock3.Style>
+                    <Style TargetType="Controls:FloorBlock3">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Controls:FloorBlock3.Style>
+            </Controls:FloorBlock3>
+
+            <Controls:FloorBlock4 DataContext="{Binding Floor4}" HorizontalAlignment="Left" Height="154" VerticalAlignment="Top" Canvas.Left="-73" Canvas.Top="185" Width="488" RenderTransformOrigin="0.5,0.5">
+                <Controls:FloorBlock4.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Controls:FloorBlock4.RenderTransform>
+                <Controls:FloorBlock4.Style>
+                    <Style TargetType="Controls:FloorBlock4">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DataContext, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Controls:FloorBlock4.Style>
+            </Controls:FloorBlock4>
+
+        </Canvas>
+    </Grid>
+</Page>

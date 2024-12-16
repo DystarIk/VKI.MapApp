@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="VKI.MapApp.Views.Controls.FloorBlock3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VKI.MapApp.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="420">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Image Source="C:\Users\mazur\Downloads\photo_2024-12-16_16-59-17.jpg" Margin="30,1,-2,-1" Grid.RowSpan="5" Grid.ColumnSpan="20" Grid.Column="1"/>-->
+
+
+        <!--Лестница-->
+        <local:RoomBlock Grid.RowSpan="4" DataContext="{Binding Floor3[29]}"/>
+        <local:RoomBlock Grid.Column="20" Grid.RowSpan="4" DataContext="{Binding Floor3[29]}"/>
+        <local:RoomBlock Grid.Column="5" Grid.RowSpan="2" DataContext="{Binding Floor3[29]}"/>
+        <local:RoomBlock Grid.Column="13" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[29]}"/>
+
+        <!--301-->
+        <local:RoomBlock Grid.Column="1" Grid.RowSpan="2" DataContext="{Binding Floor3[0]}"/>
+
+        <!--302-->
+        <local:RoomBlock Grid.Column="1" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[1]}"/>
+
+        <!--303-->
+        <local:RoomBlock Grid.Column="2" Grid.RowSpan="2" DataContext="{Binding Floor3[2]}"/>
+
+        <!--304-->
+        <local:RoomBlock Grid.Column="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[3]}"/>
+
+        <!--305-->
+        <local:RoomBlock Grid.Column="3" Grid.RowSpan="2" DataContext="{Binding Floor3[4]}"/>
+
+        <!--306-->
+        <local:RoomBlock Grid.Column="3" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[5]}"/>
+
+        <!--307-->
+        <local:RoomBlock Grid.Column="4" Grid.RowSpan="2" DataContext="{Binding Floor3[6]}"/>
+
+        <!--308-->
+        <local:RoomBlock Grid.Column="4" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[7]}"/>
+
+        <!--309-->
+        <local:RoomBlock Grid.Column="6" Grid.RowSpan="2" DataContext="{Binding Floor3[8]}"/>
+
+        <!--310-->
+        <local:RoomBlock Grid.Column="5" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[9]}"/>
+
+        <!--311-->
+        <local:RoomBlock Grid.Column="7" Grid.RowSpan="2" DataContext="{Binding Floor3[10]}"/>
+
+        <!--311а-->
+        <local:RoomBlock Grid.Column="8" Grid.RowSpan="2" DataContext="{Binding Floor3[11]}"/>
+
+        <!--312-->
+        <local:RoomBlock Grid.Column="6" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[12]}"/>
+
+        <!--312а-->
+        <local:RoomBlock Grid.Column="7" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[13]}"/>
+
+        <!--313-->
+        <local:RoomBlock Grid.Column="10" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding Floor3[14]}"/>
+
+        <!--313а-->
+        <local:RoomBlock Grid.Column="9" Grid.RowSpan="2" DataContext="{Binding Floor3[15]}"/>
+
+        <!--314-->
+        <local:RoomBlock Grid.Column="9" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[16]}"/>
+
+        <!--315-->
+        <local:RoomBlock Grid.Column="12" Grid.RowSpan="2" DataContext="{Binding Floor3[17]}"/>
+
+        <!--316-->
+        <local:RoomBlock Grid.Column="11" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[18]}"/>
+
+        <!--317-->
+        <local:RoomBlock Grid.Column="13" Grid.RowSpan="2" DataContext="{Binding Floor3[19]}"/>
+
+        <!--318-->
+        <local:RoomBlock Grid.Column="12" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[20]}"/>
+
+        <!--319-->
+        <local:RoomBlock Grid.Column="14" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding Floor3[21]}"/>
+
+        <!--320-->
+        <local:RoomBlock Grid.Column="16" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[22]}"/>
+
+        <!--321-->
+        <local:RoomBlock Grid.Column="16" Grid.RowSpan="2" DataContext="{Binding Floor3[23]}"/>
+
+        <!--322-->
+        <local:RoomBlock Grid.Column="18" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[24]}"/>
+
+        <!--323-->
+        <local:RoomBlock Grid.Column="17" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding Floor3[25]}"/>
+
+        <!--325-->
+        <local:RoomBlock Grid.Column="19" Grid.RowSpan="2" DataContext="{Binding Floor3[26]}"/>
+
+        <!--С/У-->
+        <local:RoomBlock Grid.Column="15" Grid.RowSpan="2" Grid.Row="3" DataContext="{Binding Floor3[27]}"/>
+
+        <!--Коридор-->
+        <local:RoomBlock Grid.Column="1" Grid.ColumnSpan="19" Grid.Row="2" DataContext="{Binding Floor3[28]}"/>
+    </Grid>
+</UserControl>

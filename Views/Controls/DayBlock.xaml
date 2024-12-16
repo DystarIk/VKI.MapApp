@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="VKI.MapApp.Views.Controls.DayBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VKI.MapApp.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="800">
+    <Border BorderBrush="Black" BorderThickness="0.5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="Auto"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Отображение дня недели-->
+            <Border BorderBrush="Black" BorderThickness="1" Background="{Binding Secondary}">
+                <TextBlock Text="{Binding Subjects[0].DayOfWeek}" FontSize="20" FontWeight="Bold"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" 
+                       Margin="0,10,0,10" Foreground="{Binding ThemeText}">
+                    <TextBlock.LayoutTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-90"/>
+                        </TransformGroup>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+            </Border>
+
+
+            <!--Отображение списка предметов-->
+            <Border Grid.Column="1">
+                <ItemsControl ItemsSource="{Binding SubjectBlockVMs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1.5">
+                                <local:SubjectBlock DataContext="{Binding}" />
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Border>
+        </Grid>
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="Visibility" Value="Visible"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Subjects}" Value="{x:Null}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+    </Border>
+</UserControl>

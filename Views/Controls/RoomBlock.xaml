@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="VKI.MapApp.Views.Controls.RoomBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VKI.MapApp.Views.Controls"
+             mc:Ignorable="d">
+    <Border Background="{Binding Background}" BorderThickness="0.5" BorderBrush="Black">
+        <TextBlock Text="{Binding RoomNumber}" Foreground="{Binding ThemeText}" 
+        VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">
+            <TextBlock.LayoutTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                </TransformGroup>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+    </Border>
+</UserControl>

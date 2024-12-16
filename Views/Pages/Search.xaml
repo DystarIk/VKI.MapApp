@@ -1,0 +1,63 @@
+﻿<Page x:Class="VKI.MapApp.Views.Pages.Search"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:local="clr-namespace:VKI.MapApp.Views.Pages"
+      xmlns:controls ="clr-namespace:VKI.MapApp.Views.Controls"
+      Background="{Binding Background}"
+      mc:Ignorable="d" 
+      d:DesignHeight="576" d:DesignWidth="360"
+      Title="Search" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Поиск" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="10"
+                   Foreground="{Binding ThemeText}"/>
+
+        <!--Поиск и фильтры-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0">
+            <ComboBox x:Name="FilterComboBox" Width="110" Height="30" 
+                  SelectedIndex="0" Margin="0,0,10,0" 
+                  ItemsSource="{Binding Tags}"
+                  SelectedItem="{Binding SelectedTag, Mode=TwoWay}"
+                  Foreground="{Binding ThemeText}">
+            </ComboBox>
+            <TextBox x:Name="SearchTextBox" Width="130" Text="{Binding Text}" Height="30" Margin="0,0,10,0"
+                     Foreground="{Binding ThemeText}">
+            </TextBox>
+            <Button Content="Найти" Width="Auto" Height="30" Foreground="{Binding ThemeText}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding BtSearch}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </StackPanel>
+
+        <!--Результаты поиска-->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!--Блок, отображающий день недели — понедельник-->
+                <controls:DayBlock DataContext="{Binding Monday}"/>
+                <!--Блок, отображающий день недели — вторник-->
+                <controls:DayBlock DataContext="{Binding Tuesday}"/>
+                <!--Блок, отображающий день недели — среда-->
+                <controls:DayBlock DataContext="{Binding Wednesday}"/>
+                <!--Блок, отображающий день недели — четверг-->
+                <controls:DayBlock DataContext="{Binding Thursday}"/>
+                <!--Блок, отображающий день недели — пятница-->
+                <controls:DayBlock DataContext="{Binding Friday}"/>
+                <!--Блок, отображающий день недели — суббота-->
+                <controls:DayBlock DataContext="{Binding Saturday}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

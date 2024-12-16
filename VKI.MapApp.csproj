@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Config\UserSelection.json" />
+    <None Remove="Assets\Database\College.db" />
+    <None Remove="Assets\Icons\Active\Floor1.svg" />
+    <None Remove="Assets\Icons\Active\Floor2.svg" />
+    <None Remove="Assets\Icons\Active\Floor3.svg" />
+    <None Remove="Assets\Icons\Active\Floor4.svg" />
+    <None Remove="Assets\Icons\Active\Map.svg" />
+    <None Remove="Assets\Icons\Active\Schedule.svg" />
+    <None Remove="Assets\Icons\Active\Search.svg" />
+    <None Remove="Assets\Icons\Active\User.svg" />
+    <None Remove="Assets\Icons\Inactive\Floor1.svg" />
+    <None Remove="Assets\Icons\Inactive\Floor2.svg" />
+    <None Remove="Assets\Icons\Inactive\Floor3.svg" />
+    <None Remove="Assets\Icons\Inactive\Floor4.svg" />
+    <None Remove="Assets\Icons\Inactive\Map.svg" />
+    <None Remove="Assets\Icons\Inactive\Schedule.svg" />
+    <None Remove="Assets\Icons\Inactive\search.svg" />
+    <None Remove="Assets\Icons\Inactive\User.svg" />
+    <None Remove="Assets\Xlsx\СПО Курс-1.xlsx" />
+    <None Remove="Assets\Xlsx\СПО Курс-2.xlsx" />
+    <None Remove="Assets\Xlsx\СПО Курс-3.xlsx" />
+    <None Remove="Assets\Xlsx\СПО Курс-4.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Config\UserSelection.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Database\College.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Floor1.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Floor2.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Floor3.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Floor4.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Map.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Schedule.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\Search.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Active\User.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Floor1.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Floor2.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Floor3.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Floor4.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Map.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\Schedule.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\search.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\Inactive\User.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Xlsx\СПО Курс-1.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Xlsx\СПО Курс-2.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Xlsx\СПО Курс-3.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Xlsx\СПО Курс-4.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Svg.Skia" Version="2.0.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VKI.ScheduleLib\VKI.ScheduleLib.csproj" />
+  </ItemGroup>
+
+</Project>

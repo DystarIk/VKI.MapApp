@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="                                                                                                          Controls&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+    <Position X="14.25" Y="13.5" Height="0.75" Width="14.796" />
+  </Comment>
+  <Comment CommentText="                                                                          Pages&#xD;&#xA;">
+    <Position X="4.223" Y="13.475" Height="0.75" Width="8.383" />
+  </Comment>
+  <Comment CommentText="              Windows&#xD;&#xA;">
+    <Position X="1.897" Y="13.497" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="                                                                                                                                                                                                                                                 Views&#xD;&#xA;&#xD;&#xA;">
+    <Position X="1.896" Y="12.705" Height="0.75" Width="27.171" />
+  </Comment>
+  <Comment CommentText="                                                                                                          Controls&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+    <Position X="14.211" Y="7.75" Height="0.75" Width="14.796" />
+  </Comment>
+  <Comment CommentText="                                                                          Pages&#xD;&#xA;">
+    <Position X="4.507" Y="7.726" Height="0.75" Width="8.06" />
+  </Comment>
+  <Comment CommentText="              Windows&#xD;&#xA;">
+    <Position X="1.858" Y="7.747" Height="0.75" Width="1.919" />
+  </Comment>
+  <Comment CommentText="                                                                                                                                                                                                                                                                                                                                                                        ViewModel&#xD;&#xA;&#xD;&#xA;">
+    <Position X="1.857" Y="6.955" Height="0.75" Width="27.171" />
+  </Comment>
+  <Comment CommentText="                                                                                                                                                                           Models&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+    <Position X="8.5" Y="2" Height="0.75" Width="13.343" />
+  </Comment>
+  <Class Name="VKI.MapApp.Data.JsonDataManager">
+    <Position X="8.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\JsonDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.MapApp.Models.RelayCommand" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Models.SettingsApp">
+    <Position X="15.25" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAGAAAAQAAAAQMAAAAAAAgAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SettingsApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.MapApp.Models.SvgRenderer">
+    <Position X="17.5" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAIAAAAAAAABAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SvgRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.MapApp.Models.ThemeManager">
+    <Position X="13" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQgBAEBAAAAIQAAABAAgAAAAAAAAAIAAgAAAAA=</HashCode>
+      <FileName>Models\ThemeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.MapApp.Models.UserSelection">
+    <Position X="10.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAgAAAAAQAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\UserSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.DayBlockVM" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="8.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="SubjectBlockVMs" Type="VKI.MapApp.ViewModels.Controls.SubjectBlockVM" ManuallyRouted="true">
+      <Path>
+        <Point X="15.25" Y="10.949" />
+        <Point X="15.25" Y="11.974" />
+        <Point X="17.25" Y="11.974" />
+        <Point X="17.25" Y="10.949" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAAAAAIAAAAABAgAAQAAAAAAIgAAAACAA=</HashCode>
+      <FileName>ViewModels\Controls\DayBlockVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SubjectBlockVMs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.RoomVM" BaseTypeListCollapsed="true">
+    <Position X="27" Y="8.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgABAEAAAgAIAAAIAAAgAAQAAAAAAIgAAAACAA=</HashCode>
+      <FileName>ViewModels\Controls\RoomVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.SubjectBlockVM" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="8.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAIIAAAAAAgAAQAAAAAAIgAAAACAA=</HashCode>
+      <FileName>ViewModels\Controls\SubjectBlockVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Pages.MapVM" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="8.75" Width="2" />
+    <Members>
+      <Field Name="_goToFloor1" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAAQDAABIAlAAgEIACAAEAIwAsAICAwDQAAAACIDwA=</HashCode>
+      <FileName>ViewModels\Pages\MapVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_goToFloor1" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Pages.ScheduleVM" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="8.75" Width="2" />
+    <Members>
+      <Field Name="_schedule" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAIABCAAAAAQIAAAACAAoAAQIAAARIIgAAAACAA=</HashCode>
+      <FileName>ViewModels\Pages\ScheduleVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_schedule" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Pages.SearchVM" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="8.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAQAAIABCAAAAAAIACAACAAoACYIEAAAQIgCAADCAA=</HashCode>
+      <FileName>ViewModels\Pages\SearchVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Pages.SettingsVM.SettingsVM" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="8.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAEAABAAAAACQIAAAAAAAgABwAAAAAIIgABAICAA=</HashCode>
+      <FileName>ViewModels\Pages\SettingsVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Windows.MainVM" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="8.75" Width="2" />
+    <Members>
+      <Field Name="_goToSearch" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>DRIAABAABAEAQACAYQGgAAALoAiRAAAqCAgiApAECBE=</HashCode>
+      <FileName>ViewModels\Windows\MainVM.Commands.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_goToSearch" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.DayBlock" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\DayBlock.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.FloorBlock1" BaseTypeListCollapsed="true">
+    <Position X="25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\FloorBlock1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.FloorBlock2" BaseTypeListCollapsed="true">
+    <Position X="23" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\FloorBlock2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.FloorBlock3" BaseTypeListCollapsed="true">
+    <Position X="21" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\FloorBlock3.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.FloorBlock4" BaseTypeListCollapsed="true">
+    <Position X="19" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\FloorBlock4.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.RoomBlock" BaseTypeListCollapsed="true">
+    <Position X="27" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\RoomBlock.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Controls.SubjectBlock" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Controls\SubjectBlock.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Pages.Map" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Map.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Pages.Schedule" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Schedule.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Pages.Search" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Search.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Pages.Settings" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Settings.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.Views.Windows.Main" BaseTypeListCollapsed="true">
+    <Position X="2" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Windows\Main.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.FloorBlock1VM">
+    <Position X="25" Y="8.75" Width="2" />
+    <AssociationLine Name="Floor1" Type="VKI.MapApp.ViewModels.Controls.RoomVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26" Y="9.618" />
+        <Point X="26" Y="10.438" />
+        <Point X="27" Y="10.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Controls\FloorBlock1VM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Floor1" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.FloorBlock2VM">
+    <Position X="23" Y="8.75" Width="2" />
+    <AssociationLine Name="Floor2" Type="VKI.MapApp.ViewModels.Controls.RoomVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.031" Y="9.618" />
+        <Point X="24.031" Y="10.688" />
+        <Point X="27" Y="10.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Controls\FloorBlock2VM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Floor2" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.FloorBlock3VM">
+    <Position X="21" Y="8.75" Width="2" />
+    <AssociationLine Name="Floor3" Type="VKI.MapApp.ViewModels.Controls.RoomVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.031" Y="9.618" />
+        <Point X="22.031" Y="10.938" />
+        <Point X="27" Y="10.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Controls\FloorBlock3VM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Floor3" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VKI.MapApp.ViewModels.Controls.FloorBlock4VM">
+    <Position X="19" Y="8.75" Width="2" />
+    <AssociationLine Name="Floor4" Type="VKI.MapApp.ViewModels.Controls.RoomVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20" Y="9.618" />
+        <Point X="20" Y="11.188" />
+        <Point X="27" Y="11.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Controls\FloorBlock4VM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Floor4" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
