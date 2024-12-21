@@ -17,9 +17,9 @@ public partial class SearchVM : INotifyPropertyChanged
     public DayBlockVM? Friday { get; set; }
     public DayBlockVM? Saturday { get; set; }
 
-    public string Background { get; private set; }
-    public string Secondary { get; private set; }
-    public string ThemeText { get; private set; }
+    public string Background => ThemeManager.ThemeBackground;
+    public string Secondary => ThemeManager.ThemeSecondary;
+    public string ThemeText => ThemeManager.ThemeText;
     public string? Text { get; set; }
     public List<string> Tags { get; } = new()
     {
@@ -35,9 +35,6 @@ public partial class SearchVM : INotifyPropertyChanged
     public SearchVM()
     {
         ThemeManager.PropertyChanged += ThemeManagerPropertyChanged;
-        Background = "#FFFFFF";
-        Secondary = "#FFFFFF";
-        ThemeText = "#FFFFFF";
         ChangingTheme();
     }
 
@@ -128,10 +125,6 @@ public partial class SearchVM : INotifyPropertyChanged
     }
     private void ChangingTheme()
     {
-        ThemeText = ThemeManager.ThemeText;
-        Secondary = ThemeManager.ThemeSecondary;
-        Background = ThemeManager.ThemeBackground;
-
         OnPropertyChanged(nameof(ThemeText));
         OnPropertyChanged(nameof(Secondary));
         OnPropertyChanged(nameof(Background));

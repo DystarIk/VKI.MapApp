@@ -23,22 +23,22 @@ public class SvgRenderer
 
     public BitmapSource SvgToBitMap()
     {
-        // Загружаем SVG
+        //Загружаем SVG
         SKSvg svg = new SKSvg();
         using (var stream = new FileStream(_pathSvg, FileMode.Open, FileAccess.Read))
         {
             svg.Load(stream);
         }
 
-        // Получаем размеры SVG
+        //Получаем размеры SVG
         int width = (int)(svg.Picture?.CullRect.Width ?? 25 * _scaleFactor);
         int height = (int)(svg.Picture?.CullRect.Height ?? 25 * _scaleFactor);
 
-        // Создаем холст для рендеринга SVG
+        //Создаем холст для рендеринга SVG
         using (var bitmap = new SKBitmap(width, height))
         using (var canvas = new SKCanvas(bitmap))
         {
-            // Рендерим SVG на холст
+            //Рендерим SVG на холст
             canvas.Clear(SKColors.Transparent);
             using (var paint = new SKPaint())
             {
@@ -47,7 +47,7 @@ public class SvgRenderer
             }
             canvas.Flush();
 
-            // Преобразуем SKBitmap в BitmapSource
+            //Преобразуем SKBitmap в BitmapSource
             using (var image = SKImage.FromBitmap(bitmap))
             using (var data = image.Encode(SKEncodedImageFormat.Png, 100))
             using (var stream = data.AsStream())
@@ -57,7 +57,7 @@ public class SvgRenderer
                 bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
                 bitmapImage.StreamSource = stream;
                 bitmapImage.EndInit();
-                bitmapImage.Freeze(); // Замораживаем изображение для безопасного использования в других потоках
+                bitmapImage.Freeze();
 
                 return bitmapImage;
             }

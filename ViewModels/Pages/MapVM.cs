@@ -161,9 +161,6 @@ public class MapVM : INotifyPropertyChanged
         _BtFloor3Inactive = new SvgRenderer(SKColor.Parse(ThemeManager.ThemeButton), "Assets/Icons/Inactive/Floor3.svg").SvgToBitMap();
         _BtFloor4Inactive = new SvgRenderer(SKColor.Parse(ThemeManager.ThemeButton), "Assets/Icons/Inactive/Floor4.svg").SvgToBitMap();
 
-
-
-
         OnPropertyChanged(nameof(BtFloor1));
         OnPropertyChanged(nameof(BtFloor2));
         OnPropertyChanged(nameof(BtFloor3));

@@ -8,6 +8,9 @@ namespace VKI.MapApp.ViewModels.Pages.SettingsVM
     public class SettingsVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+        public string Background => ThemeManager.ThemeBackground;
+        public string Secondary => ThemeManager.ThemeSecondary;
+        public string ThemeText => ThemeManager.ThemeText;
 
         private Dictionary<int, string> _lstTheme = new()
         {
@@ -31,10 +34,6 @@ namespace VKI.MapApp.ViewModels.Pages.SettingsVM
             ChangingTheme();
         }
 
-
-        public string Background => ThemeManager.ThemeBackground;
-        public string Secondary => ThemeManager.ThemeSecondary;
-        public string ThemeText => ThemeManager.ThemeText;
 
         public Dictionary<int, string> ListTheme => _lstTheme;
         public List<Group> Groups => SettingsApp.Groups;

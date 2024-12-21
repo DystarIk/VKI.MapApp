@@ -1,27 +1,23 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using VKI.ScheduleLib.Models;
 using VKI.MapApp.Models;
+using VKI.ScheduleLib.Models;
 
 namespace VKI.MapApp.ViewModels.Controls;
 
-public  class SubjectBlockVM : INotifyPropertyChanged
+public class SubjectBlockVM : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
     public Subject Subject { get; set; }
-    public string Background { get; private set; }
-    public string Secondary { get; private set; }
-    public string ThemeText { get; private set; }
+    public string Background => ThemeManager.ThemeBackground;
+    public string Secondary => Check() ? ThemeManager.ThemeSecondary : ThemeManager.ThemeBackground;
+    public string ThemeText => ThemeManager.ThemeText;
 
 
     public SubjectBlockVM(Subject subject)
     {
         ThemeManager.PropertyChanged += ThemeManagerPropertyChanged;
-        Background = "#FFFFFF";
-        ThemeText = "#FFFFFF";
-        Secondary = "#FFFFFF";
         Subject = subject;
-        ChangingTheme();
     }
 
 
@@ -30,14 +26,12 @@ public  class SubjectBlockVM : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+    private bool Check()
+    {
+        return Subject.IsTimeInLesson();
+    }
     private void ChangingTheme()
     {
-        Secondary = Subject.IsTimeInLesson()
-            ? ThemeManager.ThemeSecondary
-            : ThemeManager.ThemeBackground;
-
-        ThemeText = ThemeManager.ThemeText;
-        Background = ThemeManager.ThemeBackground;
         OnPropertyChanged(nameof(ThemeText));
         OnPropertyChanged(nameof(Secondary));
         OnPropertyChanged(nameof(Background));

@@ -10,19 +10,16 @@ public class DayBlockVM : INotifyPropertyChanged
     public event PropertyChangedEventHandler? PropertyChanged;
     public List<SubjectBlockVM?>? SubjectBlockVMs { get; set; }
     public List<Subject>? Subjects { get; set; }
-    public string Background { get; private set; }
-    public string Secondary { get; private set; }
-    public string ThemeText { get; private set; }
+    public string Background => ThemeManager.ThemeBackground;
+    public string Secondary => Check() ? ThemeManager.ThemeSecondary : ThemeManager.ThemeBackground;
+    public string ThemeText => ThemeManager.ThemeText;
 
 
     public DayBlockVM(List<Subject>? subjects)
     {
         Subjects = subjects;
         ThemeManager.PropertyChanged += ThemeManagerPropertyChanged;
-        Background = "#FFFFFF";
-        Secondary = "#FFFFFF";
-        ThemeText = "#FFFFFF";
-
+        
         if (subjects != null)
         {
             SubjectBlockVMs = new();
@@ -30,7 +27,6 @@ public class DayBlockVM : INotifyPropertyChanged
             foreach (var subject in subjects)
                 SubjectBlockVMs.Add(new(subject));
         }
-        ChangingTheme();
     }
 
 
@@ -38,22 +34,19 @@ public class DayBlockVM : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+    private bool Check()
+    {
+        return Subjects?[0].IsDayMatch() ?? false;
+    }
     private void ChangingTheme()
     {
-        Secondary = Subjects?[0].IsDayMatch() ?? false ? ThemeManager.ThemeSecondary : ThemeManager.ThemeBackground;
-
-        ThemeText = ThemeManager.ThemeText;
-        Background = ThemeManager.ThemeBackground;
-
         OnPropertyChanged(nameof(ThemeText));
         OnPropertyChanged(nameof(Secondary));
         OnPropertyChanged(nameof(Background));
     }
     private void ThemeManagerPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName == nameof(ThemeManager.ThemeId))
-        {
-            ChangingTheme();
-        }
+        if (e.PropertyName == nameof(ThemeManager.ThemeId)) ChangingTheme();
     }
 }
