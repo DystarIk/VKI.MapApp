@@ -8,53 +8,53 @@
         mc:Ignorable="d"
         Title="VKI.Map" 
         Height="640" Width="360" Background="{Binding Background}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="12*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="12*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
 
-        <Frame x:Name="MainWindows" NavigationUIVisibility="Hidden"/>
+		<Frame x:Name="MainWindows" NavigationUIVisibility="Hidden"/>
 
-        <Border Grid.Row="1" BorderBrush="{Binding Secondary}" BorderThickness="0.6"/>
+		<Border Grid.Row="1" BorderBrush="{Binding Secondary}" BorderThickness="0.6"/>
 
-        <UniformGrid Grid.Row="3" Columns="4" Margin="5">
-            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
-                <Image Source="{Binding BtMap}"/>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="MouseLeftButtonDown">
-                        <i:InvokeCommandAction Command="{Binding GoToMap}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </Border>
+		<UniformGrid Grid.Row="3" Columns="4" Margin="5">
+			<Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+				<Image Source="{Binding BtMap}"/>
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<i:InvokeCommandAction Command="{Binding GoToMap}"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</Border>
 
-            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
-                <Image Source="{Binding BtSchedule}"/>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="MouseLeftButtonDown">
-                        <i:InvokeCommandAction Command="{Binding GoToSchedule}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </Border>
+			<Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+				<Image Source="{Binding BtSchedule}"/>
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<i:InvokeCommandAction Command="{Binding GoToSchedule}"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</Border>
 
-            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
-                <Image Source="{Binding BtSearch}"/>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="MouseLeftButtonDown">
-                        <i:InvokeCommandAction Command="{Binding GoToSearch}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </Border>
+			<Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+				<Image Source="{Binding BtSearch}"/>
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<i:InvokeCommandAction Command="{Binding GoToSearch}"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</Border>
 
-            <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
-                <Image Source="{Binding BtSettings}"/>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="MouseLeftButtonDown">
-                        <i:InvokeCommandAction Command="{Binding GoToSettings}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </Border>
-        </UniformGrid>
-    </Grid>
+			<Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Width="50">
+				<Image Source="{Binding BtSettings}"/>
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<i:InvokeCommandAction Command="{Binding GoToSettings}"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</Border>
+		</UniformGrid>
+	</Grid>
 </Window>
